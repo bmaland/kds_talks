@@ -1,0 +1,10 @@
+<h1>Talks</h1>
+
+<ul>
+  <% for talk in @talks %>
+    <li>
+      <strong><%= link_to talk.title, talk.href, class: 'reveal' %></strong>
+      <small>By <%= talk.speaker %></small><br />
+    </li>
+  <% end %>
+</ul>
