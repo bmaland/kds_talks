@@ -15,15 +15,14 @@ def kds_program_import
   talks = doc.css('span.title a').map(&:inner_html)
   hrefs = doc.css('span.title a').map { |a| a.attr('href') }
 
-  program = speakers.zip(talks)
+  program = speakers.zip(talks, hrefs)
 
-  program.each_with_index do |p, i|
+  program.each do |p|
     attrs = {
       speaker: p[0],
       title: p[1],
-      href: [base_url, '/', hrefs[i]].join
+      href: [base_url, '/', p[2]].join
     }
-
     Talk.create!(attrs) unless Talk.find_by_title(attrs[:title])
   end
 end
