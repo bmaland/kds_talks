@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/bmaland/hello_engine.git
+  revision: c958550b1eba1cac34f9277974729cca9197bd38
+  specs:
+    hello_engine (0.0.1)
+      rails (~> 3.2.12)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -154,6 +161,7 @@ DEPENDENCIES
   awesome_print
   coffee-rails (~> 3.2.2)
   guard-rspec
+  hello_engine!
   jquery-rails (~> 2.2.1)
   listen
   nokogiri

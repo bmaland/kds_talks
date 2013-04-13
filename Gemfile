@@ -5,6 +5,8 @@ gem 'rails', '3.2.12'
 gem 'thin'
 gem 'nokogiri'
 
+gem 'hello_engine', github: 'bmaland/hello_engine'
+
 group :production do
   gem 'pg'
 end
